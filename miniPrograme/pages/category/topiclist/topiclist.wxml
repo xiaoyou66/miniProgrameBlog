@@ -1,0 +1,27 @@
+<import src="../../../templates/nodata.wxml" />
+<!-- 文章列表 -->
+<view class="cu-card article no-card">
+  <view wx:for="{{posts}}" wx:key="idx" wx:for-index="idx" wx:for-item="item" data-idx="{{idx}}" id="{{item.urls}},{{item.defaultImageUrl}},{{item.title}},{{item.createTime}},{{item.totalVisits}},{{item.totalZans}},{{item.totalComments}},{{item.detail}}" bindtap="bindPostDetail" class="cu-item shadow solids-bottom">
+    <view class="title text-cut ">{{item.title}}</view>
+    <view class="content">
+      <image src="{{item.defaultImageUrl}}" mode="aspectFill"></image>
+      <view class="desc">
+        <view class='text-content '>{{item.detail}}</view>
+        <view class="text-gray">
+          <text class="cuIcon-timefill"></text>
+          {{item.createTime}}
+          <text class="cuIcon-attentionfill" />
+          {{item.totalVisits}}
+          <text class="cuIcon-appreciatefill" />
+          {{item.totalZans}}
+          <text class="cuIcon-messagefill" />
+          {{item.totalComments}}
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 数据不存在 -->
+<view wx:if="{{nodata}}">
+  <template is="nodata" />
+</view>

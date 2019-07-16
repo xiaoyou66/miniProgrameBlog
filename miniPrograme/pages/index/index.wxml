@@ -1,0 +1,25 @@
+<!-- 文章列表 -->
+<view class="cu-card dynamic no-card">
+  <view  wx:for="{{posts}}" wx:key="idx" wx:for-index="idx" wx:for-item="item" data-idx="{{idx}}" id="{{item.urls}},{{item.defaultImageUrl}},{{item.title}},{{item.createTime}},{{item.totalVisits}},{{item.totalZans}},{{item.totalComments}},{{item.detail}}" bindtap="bindPostDetail" class="cu-item shadow solids-bottom"> 
+    <view class='text-content margin-top-sm'>{{item.title}}</view>
+    <view class="grid col-1 flex-sub padding-lr">
+      <image class="bg-img only-img" src="{{item.defaultImageUrl}}"></image>
+    </view>
+    <view>
+    <view class=" text-sm padding" style="padding: 25rpx;">
+    {{item.detail}}
+    </view>
+    </view>
+    <view class='text-gray text-sm text-right padding'>
+      <text class="cuIcon-timefill"></text>
+      {{item.createTime}} 
+      <text class="cuIcon-attentionfill" />
+      {{item.totalVisits}} 
+      <text class="cuIcon-appreciatefill" />
+      {{item.totalZans}} 
+      <text class="cuIcon-messagefill" />
+      {{item.totalComments}} 
+    </view>
+  </view>
+
+</view>

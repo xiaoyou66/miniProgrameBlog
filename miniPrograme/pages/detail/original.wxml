@@ -1,0 +1,5 @@
+<view class="cu-list menu card-menu margin-top">
+  <view>因为个人微信小程序不支持打开网页，所以可以点击下面的按钮复制链接自行到浏览器访问.</view>
+  <view>你将要访问的链接是：{{contents}} </view>
+  <button  bindtap='copyText' data-text="{{contents}}">复制该链接</button>
+</view>

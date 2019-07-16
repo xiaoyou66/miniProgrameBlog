@@ -1,0 +1,13 @@
+<view class="cu-list menu card-menu margin-top" wx:for="{{posts}}" wx:key="idx" wx:for-index="idx" wx:for-item="item">
+    <view class="cu-item">
+        <view class="content padding-tb-sm">
+         <view class='text-gray text-sm text-right padding'>
+            <text class="cuIcon-timefill"></text>
+            {{item.createTime}} 
+          </view>
+          <view class="text-gray text-sm">
+              {{item.title}}
+          </view>
+        </view>
+    </view>
+</view>
